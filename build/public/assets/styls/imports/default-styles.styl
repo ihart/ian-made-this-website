@@ -1,0 +1,116 @@
+html {
+	font-size: 100%;
+	text-size-adjust: 100%;
+	/*overflow-y: scroll;*/
+}
+
+body {
+	background: white;
+	color: black;
+	font-family: font-family-medium;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0 auto;
+	min-height: 30em;
+	/*text-align: center;*/
+	.old-ie & {
+		/*width: 736px;*/
+	}
+	@media mq-widest {
+		/*overflow-x: hidden;*/
+	}
+}
+
+
+
+/* =links */
+a {
+	border-bottom: 1px solid light-grey;
+	color: pink;
+	text-decoration: none; 
+	&:hover {
+		border-color: white;
+	}
+}
+
+
+
+/* =heading content */
+h1,
+h2,
+h3,
+.alpha,
+.beta,
+.gamma {
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+	overflow: hidden;
+}
+
+h1,
+.alpha {
+	/*word-wrap: break-word;*/
+}
+
+h2,
+.beta {
+	font-size: 1.5em;
+}
+
+h3,
+.gamma {
+	font-size: 1em;
+}
+
+
+
+/* =text-level semantics */
+i {
+	font-style: normal;
+}
+
+
+/* =grouping content */
+p {
+	margin: 0;
+}
+
+
+/* == lists */
+ul,
+ol,
+dl {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	li {
+		/*list-style: none;*/
+	}
+}
+
+
+
+
+/* =sectioning */
+nav ul,
+menu {
+/*	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;*/
+}
+
+
+
+/* =embedding content */
+img {
+	/*border: 0;
+	interpolation-mode: bicubic;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;*/
+}

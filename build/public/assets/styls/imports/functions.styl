@@ -1,0 +1,43 @@
+// = clear (overrides clear to give clear fix)
+clear(arg)
+	if arg is "fix"
+		&::before
+		&::after
+			content: " "
+			display: table
+		&::after
+			clear: both
+		.old-ie &
+			*zoom: 1 if support-for-ie
+	else
+		clear: arg
+
+
+
+// = px to em calc
+calc-px-to-em(size, base = 16)
+	unit(size / base, 'em')
+
+
+
+// = em calc
+calc-context(size, context = 1024)
+	unit((size / context) * 100, '%')
+
+
+
+// = font-smoothing
+interpolation-mode()
+	vendor('interpolation-mode', arguments, only: ms)
+
+
+
+// =font-face
+font-face(name, filename, weight = normal, style = normal)
+	@font-face {
+		font-family: '"%s"' % name
+		src: 'url("../fonts/%s.eot")' % filename
+		src: 'url("../fonts/%s.eot?#iefix") format("embedded-opentype"), url("../fonts/%s.woff") format("woff"), url("../fonts/%s.ttf") format("truetype")' % (filename filename filename)
+		font-weight: weight
+		font-style: style
+	}
